@@ -14,5 +14,7 @@ namespace PackagingAndDelivery.Models
         public int Packaging { get; set; }
         [CsvColumn(FieldIndex = 3)]
         public int Delivery { get; set; }
+        [CsvColumn(FieldIndex = 4)]
+        public int Sheath { get; set; }
     }
 }

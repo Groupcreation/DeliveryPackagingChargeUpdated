@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PackagingAndDelivery.Models;
 using LINQtoCSV;
@@ -23,7 +19,9 @@ namespace PackagingAndDelivery.Controllers
             _log4net.Info("GetPackagingDeliveryCharge() called");
             if (count <= 0)
             {
+                //Checking if count is invalid
                 return BadRequest("Invalid count");
+                //return -1;
             }
             var CSVFile = new CsvFileDescription
             {
@@ -32,6 +30,7 @@ namespace PackagingAndDelivery.Controllers
             };
             try
             {
+                // Reading the CSV file for fetching the static values
                 int Charge = 0;
                 var CSV = new CsvContext();
                 var Charges = from values in CSV.Read<Item>(@"./Items.csv", CSVFile)
@@ -39,18 +38,25 @@ namespace PackagingAndDelivery.Controllers
                               select new
                               {
                                   DeliveryCharge = values.Delivery,
-                                  PackagingCharge = values.Packaging
+                                  PackagingCharge = values.Packaging,
+                                  SheathCharge = values.Sheath
                               };
                 var Fee = Charges.Select(charge => charge.DeliveryCharge + charge.PackagingCharge).ToList();
+                var Sheath = Charges.Select(charge => charge.SheathCharge).ToList();
                 foreach (int value in Fee)
+                {
+                    Charge += value*count;
+                }
+                foreach (int value in Sheath)
                 {
                     Charge += value;
                 }
-
-                return Charge * count;
+                return Charge;
             }
             catch (Exception exception)
             {
+                //Handling the exception
+                _log4net.Error("Exception occured: "+exception);
                 return BadRequest("Exception occurred "+ exception);
             }
         }

@@ -1,3 +1,3 @@
-ItemType,Packaging,Delivery
-Integral,100,200
-Accessory,50,100
+ItemType,Packaging,Delivery,Sheath
+Integral,100,200,0
+Accessory,50,100,50

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\OneDrive\\Desktop\\Return Order\\PackagingAndDelivery\\PackagingAndDelivery.csproj": {}
+    "C:\\Users\\user\\OneDrive\\Desktop\\Return Order Management\\PackagingDeliveryCharge\\PackagingAndDelivery\\PackagingAndDelivery.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\OneDrive\\Desktop\\Return Order\\PackagingAndDelivery\\PackagingAndDelivery.csproj": {
+    "C:\\Users\\user\\OneDrive\\Desktop\\Return Order Management\\PackagingDeliveryCharge\\PackagingAndDelivery\\PackagingAndDelivery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Desktop\\Return Order\\PackagingAndDelivery\\PackagingAndDelivery.csproj",
+        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Desktop\\Return Order Management\\PackagingDeliveryCharge\\PackagingAndDelivery\\PackagingAndDelivery.csproj",
         "projectName": "PackagingAndDelivery",
-        "projectPath": "C:\\Users\\user\\OneDrive\\Desktop\\Return Order\\PackagingAndDelivery\\PackagingAndDelivery.csproj",
+        "projectPath": "C:\\Users\\user\\OneDrive\\Desktop\\Return Order Management\\PackagingDeliveryCharge\\PackagingAndDelivery\\PackagingAndDelivery.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\Desktop\\Return Order\\PackagingAndDelivery\\obj\\",
+        "outputPath": "C:\\Users\\user\\OneDrive\\Desktop\\Return Order Management\\PackagingDeliveryCharge\\PackagingAndDelivery\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
